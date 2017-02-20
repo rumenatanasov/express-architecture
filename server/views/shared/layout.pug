@@ -13,4 +13,6 @@ html
         li.delimeter
         li
           a(href="/users/register") Register  
+      if(globalError)
+        h3= globalError    
       block main-content    
