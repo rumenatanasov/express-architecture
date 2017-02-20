@@ -2,5 +2,9 @@
   "name": "architecture",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
- 
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.14.1",
+    "mongoose": "4.8.4"
+  }
+}
