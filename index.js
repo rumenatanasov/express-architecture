@@ -6,6 +6,7 @@ let config = require('./server/congig/config')[env]
 require('./server/congig/database')(config)
 require('./server/congig/express')(config, app)
 require('./server/congig/routes')(app)
+require('./server/congig/passport')
 
 
 app.listen(config.port)
