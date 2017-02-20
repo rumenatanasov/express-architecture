@@ -5,10 +5,8 @@ let env = process.env.NODE_ENV || 'development'
 let config = require('./server/congig/config')[env]
 require('./server/congig/database')(config)
 require('./server/congig/express')(config, app)
+require('./server/congig/routes')(app)
 
-app.get('/', (req, res) => {
-    res.render('index')
-})
 
 app.listen(config.port)
 console.log('Express ready')
