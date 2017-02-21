@@ -5,6 +5,8 @@ module.exports = (app) => {
   app.get('/about', controllers.home.about)
   app.get('/users/register', controllers.users.register)
   app.post('/users/create', controllers.users.create)
+  app.get('/users/login', controllers.users.login)
+  app.post('/users/authenticate', controllers.users.authenticate)
 
   app.all('*', (req, res) => {
     res.status(404)
