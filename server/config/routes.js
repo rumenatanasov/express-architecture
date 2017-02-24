@@ -1,5 +1,5 @@
 let controllers = require('../controllers')
-let auth = require('../congig/auth')
+let auth = require('../config/auth')
 
 module.exports = (app) => {
   app.get('/', controllers.home.index)

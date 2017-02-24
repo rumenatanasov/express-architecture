@@ -3,12 +3,12 @@ const express = require('express')
 let app = express()
 
 let env = process.env.NODE_ENV || 'development'
-let config = require('./server/congig/config')[env]
+let config = require('./server/config/config')[env]
 
-require('./server/congig/database')(config)
-require('./server/congig/express')(config, app)
-require('./server/congig/routes')(app)
-require('./server/congig/passport')()
+require('./server/config/database')(config)
+require('./server/config/express')(config, app)
+require('./server/config/routes')(app)
+require('./server/config/passport')()
 
 app.listen(config.port)
 console.log('Express ready!')
